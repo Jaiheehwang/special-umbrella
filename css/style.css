@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css");
+@import url("fonts.css");
+
+/* 스타일 초기화*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 숨긴 컨텐츠 */
+
+legend, .search-form label {
+  background-color: lawngreen;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  font-size: 0;
+  line-height: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+/* 링크 스타일 */
+
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: red;
+}
+
+/* 반응형 컨텐츠 */
+
+.reponsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 본문 스타일 */
+
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+  color: #181818;
+  background-color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Mobile */
+
+@media screen and (min-width:320px) {
+  .container {
+    background-color: pink;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    background-color: #38302e;
+  }
+  .logo, .member, .search-form {
+    padding: 1rem 2rem;
+  }
+  .logo {
+    width: 30%;
+  }
+  .navigation {
+    max-width: 100%;
+    height: auto;
+  }
+  .member {
+    background-color: #988574;
+    color: #fff;
+    list-style: none;
+    order: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .search-form {
+    padding-top: 0;
+  }
+  .search {
+    border: 1px solid #aaaaaa;
+    padding: 6px 2px 4px 10px;
+    border-radius: 5px;
+    width: calc(100% - 3.5rem);
+  }
+  .btn-search {
+    position: relative;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: none;
+  }
+  .btn-search::after {
+    background-image: url("./images/btn_search.png");
+    content: "";
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.member li {
+  margin-left: 1rem;
+}
+.member a {
+  padding: 0.5rem 0.5rem;
+}
+
+/* Desktop */
+
+@media screen and (min-width:1000px) {
+  body {
+    background-color: yellow;
+  }
+}
